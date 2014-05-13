@@ -24,8 +24,6 @@ package kha.tiled;
 import haxe.io.Path;
 import kha.Image;
 
-import flash.display.BitmapData;
-
 class Helper {
 
 	private static var assetLoader:AssetLoader;

@@ -25,10 +25,6 @@
 // Link to related file: <https://github.com/HaxePunk/tiled/blob/master/com/haxepunk/tmx/TmxLayer.hx>
 package kha.tiled;
 
-import flash.geom.Rectangle;
-import flash.utils.ByteArray;
-import flash.utils.Endian;
-
 class Layer {
 
 	/** The name of this layer */
@@ -96,7 +92,7 @@ class Layer {
 					var chunk:String = "";
 					switch(encoding){
 						case "base64":
-							chunk = child.firstChild().nodeValue;
+							/*chunk = child.firstChild().nodeValue;
 							var compressed:Bool = false;
 							if (child.exists("compression")){
 								switch(child.get("compression")){
@@ -106,7 +102,8 @@ class Layer {
 										throw "TiledMap: data compression type not supported!";
 								}
 							}
-							tileGIDs = base64ToArray(chunk, width, compressed);
+							tileGIDs = base64ToArray(chunk, width, compressed);*/
+							throw "kha-tiled: base64 not supported at the moment";
 						case "csv":
 							chunk = child.firstChild().nodeValue;
 							tileGIDs = csvToArray(chunk);
@@ -188,7 +185,7 @@ class Layer {
 	}
 
 
-	private static function base64ToArray(chunk:String, lineWidth:Int, compressed:Bool):Array<Int>{
+	/*private static function base64ToArray(chunk:String, lineWidth:Int, compressed:Bool):Array<Int>{
 		var result:Array<Int> = new Array<Int>();
 		var data:ByteArray = base64ToByteArray(chunk);
 
@@ -247,5 +244,5 @@ class Layer {
 		// Rewind & return decoded data
 		output.position = 0;
 		return output;
-	}
+	}*/
 }

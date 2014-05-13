@@ -20,8 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 package kha.tiled;
-
-import flash.geom.Point;
+import kha.math.Vector2;
 
 class TiledObject {
 
@@ -104,8 +103,8 @@ class TiledObject {
 				}
 
 				if (child.nodeName == "polygon" || child.nodeName == "polyline") {
-					var origin:Point = new Point(x, y);
-					var points:Array<Point> = new Array<Point>();
+					var origin:Vector2 = new Vector2(x, y);
+					var points:Array<Vector2> = new Array<Vector2>();
 
 					var pointsAsString:String = child.get("points");
 
@@ -113,7 +112,7 @@ class TiledObject {
 
 					for(p in pointsAsStringArray) {
 						var coords:Array<String> = p.split(",");
-						points.push(new Point(Std.parseInt(coords[0]), Std.parseInt(coords[1])));
+						points.push(new Vector2(Std.parseInt(coords[0]), Std.parseInt(coords[1])));
 					}
 
 					if(child.nodeName == "polygon") {

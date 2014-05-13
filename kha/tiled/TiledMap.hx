@@ -28,12 +28,6 @@ import haxe.io.Path;
 
 import kha.tiled.display.Renderer;
 
-/*#if !flash
-import openfl.tiled.display.TilesheetRenderer;
-#else
-import openfl.tiled.display.CopyPixelsRenderer;
-#end*/
-
 /**
  * This class represents a TILED map
  * @author Christopher Kaster
@@ -117,11 +111,6 @@ class TiledMap {
 	 * @return A TiledMap object
 	 */
 	public static function fromAssets(path:String):TiledMap {
-		/*#if !flash
-		var renderer = new TilesheetRenderer();
-		#else
-		var renderer = new CopyPixelsRenderer();
-		#end*/
 		var renderer = new KhaRenderer();
 
 		return new TiledMap(path, renderer);

@@ -20,15 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 package kha.tiled;
-
-import flash.geom.Point;
+import kha.math.Vector2;
 
 class TiledPolyline {
 
-	public var origin(default, null):Point;
-	public var points(default, null):Array<Point>;
+	public var origin(default, null):Vector2;
+	public var points(default, null):Array<Vector2>;
 
-	public function new(origin:Point, points:Array<Point>) {
+	public function new(origin:Vector2, points:Array<Vector2>) {
 		this.origin = origin;
 		this.points = points;
 	}

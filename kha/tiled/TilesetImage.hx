@@ -21,9 +21,6 @@
 // THE SOFTWARE.
 package kha.tiled;
 
-import flash.display.BitmapData;
-import flash.geom.Point;
-import flash.geom.Rectangle;
 import kha.Image;
 
 class TilesetImage {

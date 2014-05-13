@@ -21,8 +21,6 @@
 // THE SOFTWARE.
 package kha.tiled;
 
-import flash.display.BitmapData;
-
 class Tile {
 
 	public var gid(default, null):Int;

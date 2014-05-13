@@ -21,9 +21,6 @@
 // THE SOFTWARE.
 package kha.tiled;
 
-/*import flash.geom.Point;
-import flash.display.BitmapData;
-import flash.geom.Rectangle;*/
 import kha.math.Vector2;
 import kha.Rectangle;
 
